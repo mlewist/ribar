@@ -19,7 +19,7 @@ class CreateFileDisksTable extends Migration
             $table->string('type')->default('REMOTE');
             $table->string('driver');
             $table->boolean('set_as_default')->default(false);
-            $table->json('credentials');
+            $table->longText('credentials');
             $table->timestamps();
         });
     }

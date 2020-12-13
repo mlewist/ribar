@@ -21,7 +21,7 @@ class CreateCustomFieldsTable extends Migration
             $table->string('model_type');
             $table->string('type');
             $table->string('placeholder')->nullable();
-            $table->json('options')->nullable();
+            $table->longText('options')->nullable();
             $table->boolean('boolean_answer')->nullable();
             $table->date('date_answer')->nullable();
             $table->time('time_answer')->nullable();
