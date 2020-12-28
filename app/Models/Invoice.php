@@ -527,6 +527,7 @@ class Invoice extends Model implements HasMedia
             'invoice' => $this,
             'company_address' => $this->getCompanyAddress(),
             'bank_name' => config('brindley.bank_name'),
+            'bank_account_name' => config('brindley.bank_account_name'),
             'bank_account_number' => config('brindley.bank_account_number'),
             'bank_sort_code' => config('brindley.bank_sort_code'),
             'shipping_address' => $this->getCustomerShippingAddress(),

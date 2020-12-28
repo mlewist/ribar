@@ -356,7 +356,7 @@
                 {!! $company_address !!}
                 <p class="pt-1">
                     @lang('Please make payments by bank transfer to'):<br/>
-                    <strong>Bank:</strong> {{ $bank_name }}<br/>
+                    <strong>Bank:</strong> {{ $bank_name }} <strong>Name:</strong> {{ $bank_account_name }}<br/>
                     <strong>Account:</strong> {{ $bank_account_number }}<br/>
                     <strong>Sort Code:</strong> {{ $bank_sort_code }}
                 </p>
@@ -384,13 +384,6 @@
             @if($billing_address)
                 @lang('pdf_bill_to')
                 {!! $billing_address !!}
-            @endif
-        </div>
-
-        <div class="shipping-address-container shipping-address" @if($billing_address !== '</br>') style="float:left;" @else style="display:block; float:left: padding-left: 0px;" @endif>
-            @if($shipping_address)
-                @lang('pdf_ship_to')
-                {!! $shipping_address !!}
             @endif
         </div>
         <div style="position: relative; clear: both;">
