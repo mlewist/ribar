@@ -526,6 +526,9 @@ class Invoice extends Model implements HasMedia
         view()->share([
             'invoice' => $this,
             'company_address' => $this->getCompanyAddress(),
+            'bank_name' => config('brindley.bank_name'),
+            'bank_account_number' => config('brindley.bank_account_number'),
+            'bank_sort_code' => config('brindley.bank_sort_code'),
             'shipping_address' => $this->getCustomerShippingAddress(),
             'billing_address' => $this->getCustomerBillingAddress(),
             'notes' => $this->getNotes(),

@@ -338,10 +338,7 @@
     <div class="header-container">
         <table width="100%">
             <tr>
-                <td class="text-left">
-                    {!! $company_address !!}
-                </td>
-                <td class="text-right">
+                <td class="pl-20">
                     @if($logo)
                         <img class="header-logo" src="{{ $logo }}" alt="Company Logo">
                     @else
@@ -352,15 +349,17 @@
                 </td>
             </tr>
         </table>
-        <hr class="header-bottom-divider" style="border: 0.620315px solid #E8E8E8;" />
     </div>
     <div class="content-wrapper">
-        <div style="padding-top: 30px">
-            <div class="billing-address-container billing-address">
-                @if($billing_address)
-                    @lang('pdf_bill_to')
-                    {!! $billing_address !!}
-                @endif
+        <div style="padding-top: 10px">
+            <div class="company-address-container company-address">
+                {!! $company_address !!}
+                <p class="pt-1">
+                    @lang('Please make payments by bank transfer to'):<br/>
+                    <strong>Bank:</strong> {{ $bank_name }}<br/>
+                    <strong>Account:</strong> {{ $bank_account_number }}<br/>
+                    <strong>Sort Code:</strong> {{ $bank_sort_code }}
+                </p>
             </div>
             <div class="invoice-details-container">
                 <table>
@@ -379,6 +378,13 @@
                 </table>
             </div>
             <div style="clear: both;"></div>
+        </div>
+
+        <div class="billing-address-container billing-address">
+            @if($billing_address)
+                @lang('pdf_bill_to')
+                {!! $billing_address !!}
+            @endif
         </div>
 
         <div class="shipping-address-container shipping-address" @if($billing_address !== '</br>') style="float:left;" @else style="display:block; float:left: padding-left: 0px;" @endif>
