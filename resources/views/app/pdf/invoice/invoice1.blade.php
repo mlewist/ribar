@@ -338,7 +338,10 @@
     <div class="header-container">
         <table width="100%">
             <tr>
-                <td class="text-center">
+                <td class="text-left">
+                    {!! $company_address !!}
+                </td>
+                <td class="text-right">
                     @if($logo)
                         <img class="header-logo" src="{{ $logo }}" alt="Company Logo">
                     @else
@@ -353,8 +356,11 @@
     </div>
     <div class="content-wrapper">
         <div style="padding-top: 30px">
-            <div class="company-address-container company-address">
-                {!! $company_address !!}
+            <div class="billing-address-container billing-address">
+                @if($billing_address)
+                    @lang('pdf_bill_to')
+                    {!! $billing_address !!}
+                @endif
             </div>
             <div class="invoice-details-container">
                 <table>
@@ -373,13 +379,6 @@
                 </table>
             </div>
             <div style="clear: both;"></div>
-        </div>
-
-        <div class="billing-address-container billing-address">
-            @if($billing_address)
-                @lang('pdf_bill_to')
-                {!! $billing_address !!}
-            @endif
         </div>
 
         <div class="shipping-address-container shipping-address" @if($billing_address !== '</br>') style="float:left;" @else style="display:block; float:left: padding-left: 0px;" @endif>
