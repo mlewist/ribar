@@ -382,10 +382,16 @@
 
         <div class="billing-address-container billing-address">
             @if($billing_address)
-                @lang('pdf_bill_to')
+                <strong>Billing Address</strong>
                 {!! $billing_address !!}
             @endif
         </div>
+{{--        <div class="shipping-address-container shipping-address" @if($billing_address !== '</br>') style="float:left;" @else style="display:block; float:left: padding-left: 0px;" @endif>--}}
+{{--            @if($shipping_address)--}}
+{{--                <strong>@lang('Job Address')</strong>--}}
+{{--                {!! $shipping_address !!}--}}
+{{--            @endif--}}
+{{--        </div>--}}
         <div style="position: relative; clear: both;">
             @include('app.pdf.invoice.partials.table')
         </div>

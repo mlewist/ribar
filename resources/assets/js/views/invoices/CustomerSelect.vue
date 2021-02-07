@@ -76,58 +76,58 @@
             </div>
           </div>
         </div>
-        <div v-if="selectedCustomer.shipping_address" class="col col-6">
-          <div class="flex flex-col">
-            <label
-              class="mb-1 text-sm font-medium text-gray-500 uppercase whitespace-no-wrap"
-            >
-              {{ $t('general.ship_to') }}
-            </label>
-            <div class="flex flex-col flex-1 p-0">
-              <label
-                v-if="selectedCustomer.shipping_address.name"
-                class="relative w-11/12 text-sm truncate"
-              >
-                {{ selectedCustomer.shipping_address.name }}
-              </label>
-              <label
-                v-if="selectedCustomer.shipping_address.address_street_1"
-                class="relative w-11/12 text-sm truncate"
-              >
-                {{ selectedCustomer.shipping_address.address_street_1 }}
-              </label>
-              <label
-                v-if="selectedCustomer.shipping_address.address_street_2"
-                class="relative w-11/12 text-sm truncate"
-              >
-                {{ selectedCustomer.shipping_address.address_street_2 }}
-              </label>
-              <label
-                v-if="
-                  selectedCustomer.shipping_address.city &&
-                  selectedCustomer.shipping_address
-                "
-                class="relative w-11/12 text-sm truncate"
-              >
-                {{ selectedCustomer.shipping_address.city }},
-                {{ selectedCustomer.shipping_address.state }}
-                {{ selectedCustomer.shipping_address.zip }}
-              </label>
-              <label
-                v-if="selectedCustomer.shipping_address.country"
-                class="relative w-11/12 text-sm truncate"
-              >
-                {{ selectedCustomer.shipping_address.country.name }}
-              </label>
-              <label
-                v-if="selectedCustomer.shipping_address.phone"
-                class="relative w-11/12 text-sm truncate"
-              >
-                {{ selectedCustomer.shipping_address.phone }}
-              </label>
-            </div>
-          </div>
-        </div>
+<!--        <div v-if="selectedCustomer.shipping_address" class="col col-6">-->
+<!--          <div class="flex flex-col">-->
+<!--            <label-->
+<!--              class="mb-1 text-sm font-medium text-gray-500 uppercase whitespace-no-wrap"-->
+<!--            >-->
+<!--              {{ $t('general.ship_to') }}-->
+<!--            </label>-->
+<!--            <div class="flex flex-col flex-1 p-0">-->
+<!--              <label-->
+<!--                v-if="selectedCustomer.shipping_address.name"-->
+<!--                class="relative w-11/12 text-sm truncate"-->
+<!--              >-->
+<!--                {{ selectedCustomer.shipping_address.name }}-->
+<!--              </label>-->
+<!--              <label-->
+<!--                v-if="selectedCustomer.shipping_address.address_street_1"-->
+<!--                class="relative w-11/12 text-sm truncate"-->
+<!--              >-->
+<!--                {{ selectedCustomer.shipping_address.address_street_1 }}-->
+<!--              </label>-->
+<!--              <label-->
+<!--                v-if="selectedCustomer.shipping_address.address_street_2"-->
+<!--                class="relative w-11/12 text-sm truncate"-->
+<!--              >-->
+<!--                {{ selectedCustomer.shipping_address.address_street_2 }}-->
+<!--              </label>-->
+<!--              <label-->
+<!--                v-if="-->
+<!--                  selectedCustomer.shipping_address.city &&-->
+<!--                  selectedCustomer.shipping_address-->
+<!--                "-->
+<!--                class="relative w-11/12 text-sm truncate"-->
+<!--              >-->
+<!--                {{ selectedCustomer.shipping_address.city }},-->
+<!--                {{ selectedCustomer.shipping_address.state }}-->
+<!--                {{ selectedCustomer.shipping_address.zip }}-->
+<!--              </label>-->
+<!--              <label-->
+<!--                v-if="selectedCustomer.shipping_address.country"-->
+<!--                class="relative w-11/12 text-sm truncate"-->
+<!--              >-->
+<!--                {{ selectedCustomer.shipping_address.country.name }}-->
+<!--              </label>-->
+<!--              <label-->
+<!--                v-if="selectedCustomer.shipping_address.phone"-->
+<!--                class="relative w-11/12 text-sm truncate"-->
+<!--              >-->
+<!--                {{ selectedCustomer.shipping_address.phone }}-->
+<!--              </label>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </div>
 

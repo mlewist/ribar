@@ -159,7 +159,7 @@
     "country": "Country",
     "state": "State",
     "city": "City",
-    "zip_code": "Zip Code",
+    "zip_code": "Postcode",
     "added_on": "Added On",
     "action": "Action",
     "password": "Password",
@@ -174,7 +174,7 @@
     "edit_customer": "Edit Customer",
     "basic_info": "Basic Info",
     "billing_address": "Billing Address",
-    "shipping_address": "Shipping Address",
+    "shipping_address": "Job Address",
     "copy_billing_address": "Copy from Billing",
     "no_customers": "No customers yet!",
     "no_customers_found": "No customers found!",
@@ -714,9 +714,9 @@
       "save": "Save",
       "addresses": {
         "title": "Addresses",
-        "section_description": "You can set Customer Billing Address and Customer Shipping Address Format (Displayed in PDF only). ",
+        "section_description": "You can set Customer Billing Address and Job Address Format (Displayed in PDF only). ",
         "customer_billing_address": "Customer Billing Address",
-        "customer_shipping_address": "Customer Shipping Address",
+        "customer_shipping_address": "Job Address",
         "company_address": "Company Address",
         "insert_fields": "Insert Fields",
         "contact": "Contact",
@@ -733,7 +733,7 @@
         "address_street_1": "Address Street 1",
         "address_street_2": "Address Street 2",
         "phone": "Phone",
-        "zip_code": "Zip Code",
+        "zip_code": "Postcode",
         "address_setting_updated": "Address Setting updated successfully"
       },
       "updated_message": "Company information updated successfully",
@@ -748,7 +748,7 @@
         "enter_invoice_prefix": "Enter invoice prefix",
         "terms_and_conditions": "Terms and Conditions",
         "company_address_format": "Company Address Format",
-        "shipping_address_format": "Shipping Address Format",
+        "shipping_address_format": "Job Address Format",
         "billing_address_format": "Billing Address Format",
         "invoice_setting_updated": "Invoice Setting updated successfully"
       },
@@ -763,7 +763,7 @@
         "estimate_setting_updated": "Estimate Setting updated successfully",
         "company_address_format": "Company Address Format",
         "billing_address_format": "Billing Address Format",
-        "shipping_address_format": "Shipping Address Format"
+        "shipping_address_format": "Job Address Format"
       },
       "payments": {
         "title": "Payments",
@@ -1021,7 +1021,7 @@
     "address": "Address",
     "street": "Street1 | Street2",
     "phone": "Phone",
-    "zip_code": "Zip Code",
+    "zip_code": "Postcode",
     "go_back": "Go Back",
     "currency": "Currency",
     "language": "Language",

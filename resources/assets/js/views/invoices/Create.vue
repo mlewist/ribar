@@ -845,7 +845,7 @@ export default {
       await this.fetchTaxTypes({ limit: 'all' })
       this.selectedCurrency = this.defaultCurrency
       this.newInvoice.invoice_date = moment().toString()
-      this.newInvoice.due_date = moment().add(7, 'days').toString()
+      this.newInvoice.due_date = moment().add(28, 'days').toString()
 
       this.isLoadingInvoice = false
     },

@@ -138,46 +138,46 @@
               <br />
             </sw-input-group>
 
-            <sw-input-group :error="bill2Error" variant="horizontal">
-              <sw-textarea
-                v-model="billing.address_street_2"
-                :placeholder="$t('general.street_2')"
-                rows="2"
-                cols="50"
-                @input="$v.billing.address_street_2.$touch()"
-              />
-              <br />
-            </sw-input-group>
+<!--            <sw-input-group :error="bill2Error" variant="horizontal">-->
+<!--              <sw-textarea-->
+<!--                v-model="billing.address_street_2"-->
+<!--                :placeholder="$t('general.street_2')"-->
+<!--                rows="2"-->
+<!--                cols="50"-->
+<!--                @input="$v.billing.address_street_2.$touch()"-->
+<!--              />-->
+<!--              <br />-->
+<!--            </sw-input-group>-->
 
-            <sw-input-group
-              :label="$t('customers.country')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-select
-                v-model="billingCountry"
-                :options="countries"
-                :searchable="true"
-                :show-labels="false"
-                :placeholder="$t('general.select_country')"
-                :allow-empty="false"
-                track-by="id"
-                label="name"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.country')"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-select-->
+<!--                v-model="billingCountry"-->
+<!--                :options="countries"-->
+<!--                :searchable="true"-->
+<!--                :show-labels="false"-->
+<!--                :placeholder="$t('general.select_country')"-->
+<!--                :allow-empty="false"-->
+<!--                track-by="id"-->
+<!--                label="name"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--              />-->
+<!--            </sw-input-group>-->
 
-            <sw-input-group
-              :label="$t('customers.state')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-input
-                v-model="billing.state"
-                type="text"
-                name="billingState"
-                class="mt-1 md:mt-0"
-              />
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.state')"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-input-->
+<!--                v-model="billing.state"-->
+<!--                type="text"-->
+<!--                name="billingState"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--              />-->
             </sw-input-group>
 
             <sw-input-group
@@ -207,129 +207,129 @@
           </sw-tab-item>
 
           <!-- tab3 -->
-          <sw-tab-item title="Shipping Address" class="mt-5">
-            <div class="grid md:grid-cols-12">
-              <div class="flex justify-end col-span-12">
-                <sw-button
-                  ref="sameAddress"
-                  variant="primary"
-                  type="button"
-                  @click="copyAddress(true)"
-                >
-                  {{ $t('customers.copy_billing_address') }}
-                </sw-button>
-              </div>
-            </div>
+<!--          <sw-tab-item title="Job Address" class="mt-5">-->
+<!--            <div class="grid md:grid-cols-12">-->
+<!--              <div class="flex justify-end col-span-12">-->
+<!--                <sw-button-->
+<!--                  ref="sameAddress"-->
+<!--                  variant="primary"-->
+<!--                  type="button"-->
+<!--                  @click="copyAddress(true)"-->
+<!--                >-->
+<!--                  {{ $t('customers.copy_billing_address') }}-->
+<!--                </sw-button>-->
+<!--              </div>-->
+<!--            </div>-->
 
-            <sw-input-group
-              :label="$t('customers.name')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-input
-                v-model="shipping.name"
-                type="text"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.name')"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-input-->
+<!--                v-model="shipping.name"-->
+<!--                type="text"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--              />-->
+<!--            </sw-input-group>-->
 
-            <sw-input-group
-              :label="$t('customers.phone')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-input
-                v-model.trim="shipping.phone"
-                type="text"
-                name="phone"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.phone')"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-input-->
+<!--                v-model.trim="shipping.phone"-->
+<!--                type="text"-->
+<!--                name="phone"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--              />-->
+<!--            </sw-input-group>-->
 
-            <sw-input-group
-              :label="$t('customers.address')"
-              :error="ship1Error"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-textarea
-                v-model="shipping.address_street_1"
-                :placeholder="$t('general.street_1')"
-                rows="2"
-                cols="50"
-                class="mt-1 md:mt-0"
-                @input="$v.shipping.address_street_1.$touch()"
-              />
-              <br />
-            </sw-input-group>
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.address')"-->
+<!--              :error="ship1Error"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-textarea-->
+<!--                v-model="shipping.address_street_1"-->
+<!--                :placeholder="$t('general.street_1')"-->
+<!--                rows="2"-->
+<!--                cols="50"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--                @input="$v.shipping.address_street_1.$touch()"-->
+<!--              />-->
+<!--              <br />-->
+<!--            </sw-input-group>-->
 
-            <sw-input-group :error="ship2Error" variant="horizontal">
-              <sw-textarea
-                v-model="shipping.address_street_2"
-                :placeholder="$t('general.street_2')"
-                rows="2"
-                cols="50"
-                @input="$v.shipping.address_street_2.$touch()"
-              />
-              <br />
-            </sw-input-group>
+<!--&lt;!&ndash;            <sw-input-group :error="ship2Error" variant="horizontal">&ndash;&gt;-->
+<!--&lt;!&ndash;              <sw-textarea&ndash;&gt;-->
+<!--&lt;!&ndash;                v-model="shipping.address_street_2"&ndash;&gt;-->
+<!--&lt;!&ndash;                :placeholder="$t('general.street_2')"&ndash;&gt;-->
+<!--&lt;!&ndash;                rows="2"&ndash;&gt;-->
+<!--&lt;!&ndash;                cols="50"&ndash;&gt;-->
+<!--&lt;!&ndash;                @input="$v.shipping.address_street_2.$touch()"&ndash;&gt;-->
+<!--&lt;!&ndash;              />&ndash;&gt;-->
+<!--&lt;!&ndash;              <br />&ndash;&gt;-->
+<!--&lt;!&ndash;            </sw-input-group>&ndash;&gt;-->
 
-            <sw-input-group
-              :label="$t('customers.country')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-select
-                v-model="shippingCountry"
-                :options="countries"
-                :searchable="true"
-                :show-labels="false"
-                :allow-empty="false"
-                :placeholder="$t('general.select_country')"
-                track-by="id"
-                label="name"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
+<!--&lt;!&ndash;            <sw-input-group&ndash;&gt;-->
+<!--&lt;!&ndash;              :label="$t('customers.country')"&ndash;&gt;-->
+<!--&lt;!&ndash;              class="mt-4"&ndash;&gt;-->
+<!--&lt;!&ndash;              variant="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;            >&ndash;&gt;-->
+<!--&lt;!&ndash;              <sw-select&ndash;&gt;-->
+<!--&lt;!&ndash;                v-model="shippingCountry"&ndash;&gt;-->
+<!--&lt;!&ndash;                :options="countries"&ndash;&gt;-->
+<!--&lt;!&ndash;                :searchable="true"&ndash;&gt;-->
+<!--&lt;!&ndash;                :show-labels="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                :allow-empty="false"&ndash;&gt;-->
+<!--&lt;!&ndash;                :placeholder="$t('general.select_country')"&ndash;&gt;-->
+<!--&lt;!&ndash;                track-by="id"&ndash;&gt;-->
+<!--&lt;!&ndash;                label="name"&ndash;&gt;-->
+<!--&lt;!&ndash;                class="mt-1 md:mt-0"&ndash;&gt;-->
+<!--&lt;!&ndash;              />&ndash;&gt;-->
+<!--&lt;!&ndash;            </sw-input-group>&ndash;&gt;-->
 
-            <sw-input-group
-              :label="$t('customers.state')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-input
-                v-model="shipping.state"
-                type="text"
-                name="shippingState"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
+<!--&lt;!&ndash;            <sw-input-group&ndash;&gt;-->
+<!--&lt;!&ndash;              :label="$t('customers.state')"&ndash;&gt;-->
+<!--&lt;!&ndash;              class="mt-4"&ndash;&gt;-->
+<!--&lt;!&ndash;              variant="horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;            >&ndash;&gt;-->
+<!--&lt;!&ndash;              <sw-input&ndash;&gt;-->
+<!--&lt;!&ndash;                v-model="shipping.state"&ndash;&gt;-->
+<!--&lt;!&ndash;                type="text"&ndash;&gt;-->
+<!--&lt;!&ndash;                name="shippingState"&ndash;&gt;-->
+<!--&lt;!&ndash;                class="mt-1 md:mt-0"&ndash;&gt;-->
+<!--&lt;!&ndash;              />&ndash;&gt;-->
+<!--&lt;!&ndash;            </sw-input-group>&ndash;&gt;-->
 
-            <sw-input-group
-              :label="$t('customers.city')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-input
-                v-model="shipping.city"
-                type="text"
-                name="shippingCity"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.city')"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-input-->
+<!--                v-model="shipping.city"-->
+<!--                type="text"-->
+<!--                name="shippingCity"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--              />-->
+<!--            </sw-input-group>-->
 
-            <sw-input-group
-              :label="$t('customers.zip_code')"
-              class="mt-4"
-              variant="horizontal"
-            >
-              <sw-input
-                v-model="shipping.zip"
-                type="text"
-                class="mt-1 md:mt-0"
-              />
-            </sw-input-group>
-          </sw-tab-item>
+<!--            <sw-input-group-->
+<!--              :label="$t('customers.zip_code')"-->
+<!--              class="mt-4"-->
+<!--              variant="horizontal"-->
+<!--            >-->
+<!--              <sw-input-->
+<!--                v-model="shipping.zip"-->
+<!--                type="text"-->
+<!--                class="mt-1 md:mt-0"-->
+<!--              />-->
+<!--            </sw-input-group>-->
+<!--          </sw-tab-item>-->
         </sw-tabs>
       </div>
       <div
