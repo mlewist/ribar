@@ -62,7 +62,7 @@ class InvoicesRequest extends FormRequest
             ],
             'items.*' => [
                 'required',
-                'max:255'
+                'max:2500'
             ],
             'items.*.description' => [
                 'max:65000'
