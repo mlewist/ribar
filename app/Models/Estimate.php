@@ -442,6 +442,8 @@ class Estimate extends Model implements HasMedia
         view()->share([
             'estimate' => $this,
             'logo' => $logo ?? null,
+            'company_phone' => $this->company->address->phone,
+            'company_email' => CompanySetting::getSetting('notification_email', $this->company_id),
             'company_address' => $this->getCompanyAddress(),
             'shipping_address' => $this->getCustomerShippingAddress(),
             'billing_address' => $this->getCustomerBillingAddress(),
